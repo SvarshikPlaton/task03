@@ -31,3 +31,7 @@ openssl x509 -req -in client-req.pem -days 365000 \
 chown -R mysql:  .
 chmod 500 .
 chmod 400 ./*
+
+mv /etc/my.cnf.d/certificates/client-key.pem ~/client-key.pem
+mv /etc/my.cnf.d/certificates/client-cert.pem ~/client-cert.pem
+cp /etc/my.cnf.d/certificates/ca.pem ~/ca.pem
